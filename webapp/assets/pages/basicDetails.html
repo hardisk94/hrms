@@ -1,0 +1,204 @@
+ <div>
+            
+            <!---------------------- Div 1 --------------------------->
+            <div class="panel panel-flat removestyle">
+            
+                 <div class="panel-body" style="padding-bottom: 5px;">
+                <!--Image - col-4-->
+                
+                <div class="col-md-4 " >
+                    <div class="img-responsive fit">
+                        <img id="emp-pic" ng-src="{{emppic}}" class="fit">
+                    </div>
+                </div>
+                
+                <!--Content col-8 -->
+                
+                <div class="col-md-8 divsize" >
+                    
+                        
+                
+                    <h3 class="theme-green" style="display:inline;">{{Name}} </h3>
+                    <button class="btn btn-coviam editInfo " data-toggle="modal" data-target="#EditInfoModal" style="float:right;"><i class="icon-pencil">Edit</i></button>
+                    
+                        <p>Id: {{ employeeId }} </p> 
+                      
+                        <p class=" BasicDetailDesign">Designation: {{Designation}} </p> 
+                    
+                        <p class=""> Department: {{Department}}</p>
+                               
+                        <br>
+                        <p class="side"><i class= "glyphicon glyphicon-earphone " style="margin-right:8px;"></i> {{Phoneno}}</p>
+                            
+                            
+                        <p ><i class="glyphicon glyphicon-envelope" style="margin-right:8px;"></i>{{ Emailid }}</p>
+                            
+                       
+                        
+                       <!-- Modal -->
+                    <div class="modal fade" id="EditInfoModal" role="dialog" ng-controller="modalController">
+                            <div class="modal-dialog">
+                                
+                              <!-- Modal content-->
+                              <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Edit Basic Information</h4>
+
+                        </div>
+                                   <form id="emp_edit_form" method="PUT" enctype='application/json'>      
+
+                                                            
+                            <input name = "employeeId" type="hidden" id="employeeId"  value="eytquyetq">
+                    
+                            <input name = "customerId" type="hidden" id="customerId" value="coviam">
+
+
+                                       <!--label for="empId">Employee ID</label-->
+                                                          <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Name</span>
+                          <input id="ec_name" type="text" class="form-control" name="employeeName" placeholder="Name">
+                        </div>
+<!--
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Id</span>
+                          <input id="ec_id" type="text" class="form-control" name="emp" placeholder="Id" readonly>
+                        </div>
+-->
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Designation</span>
+                          <input id="ec_designation" type="text" class="form-control" name="designationName" placeholder="Designation">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Department</span>
+                          <input id="ec_department" type="text" class="form-control" name="departmentName" placeholder="Department">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Phone no.</span>
+                          <input id="ec_phone" type="number" class="form-control" name="phoneNumber" placeholder="Phone Number">
+                        </div>          
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Email Id</span>
+                          <input id="ec_email" type="email" class="form-control" name="emailId" placeholder="Email id">
+                        </div>          
+                                  
+                                  
+                        <div class="modal-footer">
+                       <input class="btn btn-coviam button" id="submit-btn" name="generate" type="submit" value="Submit"/> 
+                        </div>
+                    </form>
+                                       </div>
+                    
+                    
+
+                            </div>
+                          </div>
+                    
+                </div>
+                    </div>
+                
+            </div>
+            <!-------------------------------------- -->
+        
+                <!--------------------------------------- Div 2-------------------------->
+           <div class="col-md-6 stylePersonal"> 
+            <div class="panel panel-flat " >
+                <div class="panel-heading"><h4>Personal</h4></div>
+                
+                <div class="panel-body">
+                <!--Tabs-->
+                
+                    <table>
+                        <thead></thead>
+                        
+                        <tbody>
+                           
+                            <tr>
+                                <th class="td_left">Employment Type: </th>
+                                <td class="td_right">{{EmploymentType}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th class="td_left">Date Of Joining: </th>
+                                <td class="td_right">{{DOJ}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th class="td_left">Highest Degree: </th>
+                                <td class="td_right">{{HighestDegree}}</td>
+                            </tr>
+                            
+                            <tr>
+                                <th class="td_left">Blood Group: </th>
+                                <td class="td_right">{{BloodGroup}}</td>
+                            </tr>
+                            
+                            
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+                
+                 </div>
+               
+        </div>
+                
+                <!-------------------------------------------------------------- --> 
+                
+                
+             <!--------------------------------------- Div 3-------------------------->
+                                     
+            <div class="col-md-6 stylePersonal">                         
+                <div class="panel panel-flat ">
+                    <div class="panel-heading HeadingUnderline"><h4>Designation</h4></div>
+                    
+                    <div class="panel-body">
+                    
+                        <table >
+                            <thead></thead>
+                           
+                            <tbody>
+                                <tr>
+                                    <th class="td_left">Name: </th>
+                                    <td class="td_right">{{DesignationName}}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th class="td_left">Description:</th>
+                                    <td class="td_right">{{Description}}</td>
+                                </tr>
+                                
+                                
+                                <tr>
+                                    <th class="td_left">Roles:</th>
+                                    <td class="td_right">{{Roles}}</td>
+                                </tr>
+                                
+                                <tr>
+                                    <th class="td_left">Criteria:</th>
+                                    <td class="td_right">{{Criteria}}</td>
+                                </tr>
+                            
+                            </tbody>
+                            
+                        </table>  
+                        
+                    </div>
+                    
+                </div>
+            </div>
+                
+                    
+            <!--------------------------------------------------------------   -->  
+                
+            </div>
+                                
+          <script>
+ //$('#EditInfoModal #submit-btn').on('click', function(){ console.log("fsefz");});
+ 
+  //$('#submit-btn').on('click', function(){ console.log("fsefz");});
+    
+</script>                    
+                              
+                            

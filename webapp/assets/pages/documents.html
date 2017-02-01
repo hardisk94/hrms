@@ -1,0 +1,118 @@
+ <script type="text/javascript">
+    function callurl(){
+        var customer_id="1";
+        var document_id="1";
+        var employee_id="1";
+
+        window.location.href = 'http://localhost:8080'+'/document/generatepdf/'+customer_id+'/'+document_id+'/'+employee_id;
+    }
+    </script>
+
+</head>
+
+<body>
+        <div class="panel panel-flat">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+        <div ng-app="myApp" ng-controller="documentsController">
+            
+        <div class="container">
+            <ul class="nav nav-tabs">
+                <li><a data-toggle="tab" href="#offdocs">Official Company Documents</a></li>
+            </ul>
+         <div class="tab-content">
+
+         <div id="offdocs" class="tab-pane fade in active">
+              
+  
+  <div class="row" style="margin-top:5%;">
+
+      <div class="col-md-3">
+          <div class="thumbnail">
+              <i id="dataFormContainer1" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;"></i>
+              <div class="caption">
+                  <div class="inner-caption" style="margin-left:30%;"><b>Exit Letter</b></div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3">
+          <div class="thumbnail">
+              <i id="dataFormContainer2" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;"></i>
+              <div class="caption">
+                  <div class="inner-caption" style="margin-left:30%;"><b>Extension Letter</b></div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3">
+          <div class="thumbnail">
+              <i id="dataFormContainer3" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;"></i>
+              <div class="caption">
+                  <div class="inner-caption" style="margin-left:30%;"><b>Award Letter</b></div>
+              </div>
+          </div>
+      </div>
+
+      <div class="col-md-3">
+          <div class="thumbnail">
+              <i id="dataFormContainer4" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;"></i>
+              <div class="caption">
+                  <div class="inner-caption" style="margin-left:30%;"><b>Offer Letter</b></div>
+              </div>
+          </div>
+      </div>
+
+</div>
+            
+              
+              
+<div class="row" style="margin-top:5%;">
+
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <i id="dataFormContainer5" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;"></i>
+            <div class="caption">
+                <div class="inner-caption" style="margin-left:30%;"><b>Promotion Letter</b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <i id="dataFormContainer6" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;"></i>
+            <div class="caption">
+                <div class="inner-caption" style="margin-left:30%;"><b>Increment Letter</b></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <i id="dataFormContainer7" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;"></i>
+            <div class="caption">
+                <div class="inner-caption" style="margin-left:30%;"><b>Salary Certificate</b></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-3">
+        <div class="thumbnail">
+            <i id="dataFormContainer8" data-brackets-id="49958" class="fa fa-file-pdf-o" style="font-size:48px;color:red;margin-left:40%; margin-top:10%;" onclick='callurl();'></i>
+            <div class="caption">
+                <div class="inner-caption" style="margin-left:30%;"><b>Internship Letter</b></div>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+      </div>
+      </div>
+            </div>
+            </div>
+            </div>
+    </div>
+

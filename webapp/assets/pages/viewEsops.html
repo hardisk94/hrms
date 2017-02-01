@@ -1,0 +1,95 @@
+
+
+        <html ng-app="hrmsApp">
+            
+            <body ng-controller="breakageController">
+
+                <div>
+                    <!--input type="button" id="addButton" value="+ Add ESOP" style="float: right;"-->
+<!--div class="panel panel-flat pane-data">
+                 <div class="p" style="padding: 0px 20px;">
+                     <h3>ESOP Details</h3></div>
+                 
+                <div class="page-header-content">
+                    
+
+                </div>
+                
+            </div-->
+<div class="panel panel-flat pane-data" ng-controller="breakageController">
+        <div class="panel-heading" ><h4>Employee Stock Ownership Plan </h4>
+    
+   
+           <input type="button" class="btn btn-coviam" id="addButton" value="+ Add ESOP" style="float:right; margin-top:7px;">
+               </div>
+                <div class="panel-body">
+
+      
+
+                <!--h1>{{empID}}</h1-->
+
+                    <table  class="table table-hover table-striped" style="width:100%;">
+                        <thead >
+                            <tr >
+                            <th >Date Of Offering</th>
+                            <th >Offered Stocks</th>
+                            <th >Price Of Stocks</th>
+                                <th >Number of Breakages </th>
+                                <th >Active ?</th>
+                            </tr>
+
+
+                        </thead>
+
+                        <tbody id="esoptbody" >
+                        </tbody>
+
+
+                    </table>
+
+
+
+                    <!-- Modal -->
+          <div class="modal fade" id="myModal" data-backdrop="static" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div  class="modal-content">
+                <div  class="modal-header">
+                  <button  type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4  class="modal-title">Breakages</h4>
+                </div>
+                <div  class="modal-body">
+                  <table  class="table ">
+                    <thead >
+                      <tr >
+                        <th > Vesting Date </th>
+                          <th >Stocks to be vested</th>
+                        </tr>
+                      </thead>
+
+                      <tbody id="breakagetbody"    style="border-right: 20px solid transparent">
+                        <!--tr >
+                          <td >10-07-12</td>
+
+                            <td >6000</td>
+
+                          </tr-->
+                      </tbody>
+
+                    </table>
+                </div>
+                <div  class="modal-footer">
+                  <button  type="close" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+
+
+                </div>
+
+            </div>
+            

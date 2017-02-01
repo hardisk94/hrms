@@ -1,0 +1,63 @@
+     <div class="pane-data" style="width:100%;">   
+            <!----------------------------current salary-------------------->
+        
+        <div class="panel panel-flat col-md-6 ">
+          <div class="panel-heading" ><h4>Current Salary </h4></div>
+             <div class="panel-body">
+                    <table>
+                    <tr>
+                        <th>Fixed Salary:
+                        </th>
+                        <td> {{c_fixed}}</td></tr>
+                    <tr><th>Variable Salary:</th>
+                        <td>{{c_variable}}</td></tr>
+                    </table>
+                </div>
+            </div>
+                
+ <!-------------------------previous salary----------------------------->
+    <div class="panel panel-flat col-md-6">
+        <div class="panel-heading" ><h4>Previous Salary </h4></div>
+                <div class="panel-body">
+                    <table>
+                    <tr>
+                        <th>Fixed Salary:
+                        </th>
+                        <td> {{p_fixed}}</td></tr>
+                    <tr><th>Variable Salary:</th>
+                        <td>{{p_variable}}</td></tr>
+                    </table>
+               </div>
+            </div>
+         
+         <div class="panel col-md-12">      
+         <div class="panel-heading" ><h4>Variable Pay History</h4> </div>
+         <div class="panel-body">
+                <table class="table table-hover" style="width:100%;">
+                       <thead>
+                        <tr>
+                            <th>Date of Payment</th>
+                            
+                            <th>Variable Payment</th>
+                            
+                            <th>Percentage Payout</th>
+                            
+                            <th>Actual Payment Value Before Tax</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in salaryx"> 
+                                <td> {{ x.dateOfPayment }}</td>
+                                <td> {{ x.variablePayment }}</td>
+                                <td> {{ x.percentagePaid }}</td>
+                                <td> {{ x.actualPayment }}</td>
+                            </tr>
+                        </tbody>
+                </table>
+             </div>
+           </div>
+
+         </div>
+        
+         
+    

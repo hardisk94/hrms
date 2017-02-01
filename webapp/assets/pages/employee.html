@@ -1,0 +1,58 @@
+            <!--------------------------- Page Header ---------------------------->
+            
+            <div class="panel panel-flat pane-data">
+                 <div class="p" style="padding: 0px 20px;">
+                     <h3>Profile</h3></div>
+                 <!--------------- Page Content --------------->
+                <div class="page-header-content">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li id="employee-basic" class="active" ng-class="{active : tab === 'basic'}"><a data-ng-click=' tab = "basic" '>Basic Details</a>
+                            </li>
+                            <li id="employee-qualification" ng-class="{active : tab === 'qualification'}"><a data-ng-click=' tab = "qualification" '>Qualification</a>
+                            </li>
+                            <li id="employee-dependent" ng-class="{active : tab === 'dependent'}"><a data-ng-click=' tab = "dependent" '>Dependent</a>
+                            </li>
+                            <li id="employee-salary" ng-class="{active : tab === 'salary'}"><a data-ng-click=' tab = "salary" '>Salary</a>
+                            </li>
+                            <li id="employee-project" ng-class="{active : tab === 'project'}"><a data-ng-click=' tab = "project" '>Project</a>
+                            </li>
+                            <li id="employee-details" ng-class="{active : tab === 'details'}"><a data-ng-click=' tab = "details" '>Details</a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+               </div>
+                
+            </div>
+            <!--------------------------  /Page Header --------------------------->
+            
+            <!-------- Page i.e Tab content ---------->
+                   <div class="pane-data" data-ng-switch = "tab">
+                            <div class="tab-pane fade in" data-ng-switch-when='basic' id="BasicDetails">
+                                <div ng-include="'assets/pages/basicDetails.html'"></div>
+                            </div>
+                            <div class="tab-pane fade in" id="Qualification" data-ng-switch-when='qualification'>
+                               
+                                 <div ng-include="'assets/pages/Qualification.html'"></div>
+                            </div>
+                       
+                            <div class="tab-pane fade in" id="Dependent" data-ng-switch-when='dependent'>
+                               <div ng-include="'assets/pages/dependent.html'"></div>
+
+                            </div>
+                            <div class="tab-pane fade in" id="Salary"  data-ng-switch-when='salary'>
+                               <div ng-include="'assets/pages/salary.html'"></div>
+
+                            </div>
+                            <div data-ng-switch-when='project' class="tab-pane fade in"  id="Project">
+                                <div ng-include="'assets/pages/projects.html'"></div>
+
+                                </div>
+                          
+                            <div class="tab-pane fade in" id="Details" data-ng-switch-when='details'>
+                                <div ng-include="'assets/pages/Details.html'"></div>
+
+                            </div>
+                              </div>
+            

@@ -1,0 +1,118 @@
+<div class="panel panel-flat leave">
+        <div class="panel-heading">
+    <h3>Leave Management</h3>
+  <ul class="nav nav-tabs">
+    <li ng-class="{active : tab === 'tab-1'}" id="leave-history" ><a data-ng-click=' tab = "tab-1" '>Leave History</a></li>
+    <li  ng-class="{active : tab === 'tab-2'}" id="apply-leave"><a data-ng-click=' tab = "tab-2" '>Apply</a></li>
+    
+  </ul>
+    </div>
+        <div class="panel-body">
+  <div data-ng-switch = " tab ">
+    <div  data-ng-switch-when='tab-1' id="history" class="tab-pane fade in active">
+            
+            		<table class="table table-striped table-hover " style="width:100%;">
+		  <thead>
+		    <tr>
+		      
+		      <th>Leave Type</th>
+		      <th>Start Date</th>
+		      <th>End Date</th>
+		      <th>Reason</th>
+		      <th>Status</th>
+              <th>Approved Date</th>
+              <th>Approved By</th>
+              <th>Edit Details</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+              <tr ng-repeat="x in data">
+		  		
+                  
+		  		<td>{{ x.leaveType}}</td>
+		  		<td>{{ x.fromDate}}</td>
+		  		<td>{{ x.toDate}}</td>
+		  		<td>{{ x.leaveReason}}</td>
+		  		<td>{{x.statusReason}}	</td>
+                <td>{{ x.approvedDate}}</td>
+                <td>{{ x.approvedBy}}</td>
+
+                 <td><button type="button" class="btn btn-coviam" data-toggle="modal" data-target="#QualificationModal" id="table_edit" style="float:right;"><i class="icon-pencil">Edit </i></button> </td>
+		  	</tr>
+
+		  </tbody>
+		</table> 
+                </div>
+    <div data-ng-switch-when='tab-2' id="apply" class="tab-pane fade in">
+                      
+            <input type="hidden" ng-model="vm.leaveData.emp_id" value="{{vm.usr['id']}}" ng-init="vm.leaveData.emp_id=vm.usr['id']"/>
+			
+            <form  id="leaveApply_form" method="POST" enctype='application/json' style="width: 60%; margin: auto;">	
+
+            	 <input name = "employeeId" type="hidden" id="empId"  value="1">
+        
+        <!--label for="custId">Company ID</label-->
+       			 <input name = "customerId" type="hidden" id="custId" value="1">			
+            
+                <div class="form-group"  ng-class="{ 'has-error' : leaveForm.leave_type.$invalid && !leaveForm.leave_type.$pristine }">
+						      
+                    <label for="select" class="col-lg-4 control-label">Leave Type</label>
+						      <div class="col-lg-6">
+						        <select class="form-control" id="leave_type" name="leaveType" ng-model="vm.leaveData.leave_type" required>
+						          <option value="" disabled selected>Select</option>
+							      <option value="sick" >Sick</option>
+
+						        </select>
+						      </div><br>
+				</div>
+				
+                <div class="form-group" ng-class="{ 'has-error' : leaveForm.start_date.$invalid && !leaveForm.start_date.$pristine }"><br>
+				    <label class="col-lg-4 control-label">Start Date:</label>
+							  <div  style="margin-bottom:10px;"  class="col-lg-6">
+							    <input type="date" id="sdate" name="startDate" ng-model="vm.leaveData.start_date" class="form-control"  required></div>
+				</div>
+				
+                <div class="form-group"  ng-class="{ 'has-error' : leaveForm.end_date.$invalid && !leaveForm.end_date.$pristine }">
+							  
+                    <label class="col-lg-4 control-label">End Date:</label>
+							  <div  style="margin-bottom:10px;"  class="col-lg-6">
+							    <input type="date" id="edate" name="endDate" ng-model="vm.leaveData.end_date" class="form-control"  required>
+							  </div>
+				</div>
+                
+                
+                <div class="form-group"  ng-class="{ 'has-error' : leaveForm.cal_day.$invalid && !leaveForm.cal_day.$pristine }">
+							  
+                    <label class="col-lg-4 control-label">Total No. of Days:</label>
+							  <div  style="margin-bottom:10px;"  class="col-lg-6">
+							    <input type="day" id="day" name="dayCount" ng-model="vm.leaveData.cal_day" class="form-control" required>
+							  </div>
+				</div>
+                
+                
+                
+				
+                <div class="form-group"  ng-class="{ 'has-error' : leaveForm.reason.$invalid && !leaveForm.reason.$pristine }">
+							  <label class="col-lg-4 control-label">Reason:</label>
+							  <div  style="margin-bottom:10px;"  class="col-lg-6">
+							    <textarea name="leaveReason" id="reason" ng-model="vm.leaveData.reason" cols="30" rows="3" class="form-control"  required></textarea>
+							  </div>
+				</div>
+                        
+				<div class="form-group">
+					          <div  style="margin-bottom:10px;"  class="col-lg-6 col-lg-offset-9">
+					            <button type="submit" onclick=applyLeave() class="btn btn-coviam" ng-disabled="leaveForm.$invalid">Submit</button>
+					          </div>
+                    				</div>
+                    
+					        <div ng-show="vm.message" class="alert alert-dismissible" ng-class="{ 'alert-success' : vm.success == true, 'alert-danger' : vm.success == false }" >
+					          <p class="text-center"><strong>{{ vm.message }}</strong></p>
+					        </div>
+
+            </form>    </div>
+    
+  </div>
+
+           
+            </div>
+    </div>

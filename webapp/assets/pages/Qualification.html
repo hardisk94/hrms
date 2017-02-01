@@ -1,0 +1,259 @@
+
+    <!---------------main div----------------------------->
+    <div class="">  
+    
+    <!-------------------------------Education Details------------------------->
+        
+ <div class="panel" style="margin-top: 0px;"> 
+     
+   <div class="panel-heading"><h4> Education Detail</h4>
+       <button type="button" class="btn btn-coviam" data-toggle="modal" data-target="#QualificationModal" id="table_edit" style="float:right;"><i class="icon-pencil">Add Detail</i></button> 
+         </div>
+      <!------------------------Action of edit button of education details-------->
+        
+        <div class="modal fade" id="QualificationModal" role="dialog">
+        <div class="modal-dialog">
+    
+           
+         <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Edit Education Details</h4>
+                        </div>
+                <form method="POST">       
+             
+             <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Degree</span>
+                          <input id="ec_degree1" type="text" class="form-control" name="ec_name" placeholder="Degree">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">University</span>
+                          <input id="ec_university1" type="text" class="form-control" name="ec_relation" placeholder="University">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Duration</span>
+                          <input id="ec_duration1" type="text" class="form-control" name="ec_relation" placeholder="Duration">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Score</span>
+                          <input id="ec_score1" type="text" class="form-control" name="ec_relation" placeholder="Score">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Type</span>
+                          <input id="ec_type1" type="text" class="form-control" name="ec_relation" placeholder="Type">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Document</span>
+                          <input id="ec_document1" type="text" class="form-control" name="ec_relation" placeholder="Document">
+                        </div>
+                                  
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn " data-dismiss="modal" style="background-color:#26A69A;" 
+                                  ng-click="AddEduDetail()">Submit</button>
+                        </div>
+             
+             </form>
+                      </div>
+        </div>
+        </div>
+            
+             
+          
+          <!--------table content of educational detail------------>
+             <div class="panel-body">
+                <table class="table table-hover" style="width:100%;">
+                       <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Instittute</th>
+                            
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th> Score</th>
+                            <th>Type</th>
+                            <th>Document</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="x in qualificationx"> 
+                                 
+                                <td>{{ x.degree }}</td> 
+
+                                <td> {{ x.institute }}</td>
+                                <td> {{ x.dateOfJoining }}</td>
+                                <td> {{ x.graduationDate }}</td>
+                                <td> {{x.grade}}</td>
+                                <td> {{ x.educationType}}</td>
+                                
+                                <td><i class="fa fa-upload fa-2x" aria-hidden="true" ></i></td>
+                            </tr>
+                        </tbody>
+                </table>
+            </div>
+          
+         </div>
+            
+                      
+                     
+     <!----------------------------- Div  skills ------------------------------>     
+                     
+     <div class="panel panel-flat">
+       <div class="panel-heading"><h4>Skills</h4>
+        
+           <button type="button" class="btn btn-coviam btn-sm" data-toggle="modal" data-target="#Otherskills" id="table_edit" style="float:right;"><i class="icon-pencil">Add skills </i> </button></div>
+           <!------------------------------Add skill button--------->
+           <div class="panel-body">
+               
+           <div class="modal fade" id="Otherskills" role="dialog">
+           <div class="modal-dialog">
+           <div class="modal-content">
+          <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Skills</h4></div>
+          <div class="modal-body" style="margin-left:10px;">
+    <form >
+                      
+    <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Add Skills
+        <span class="caret"></span></button>
+         <ul class="dropdown-menu">
+         <li><a href="#">Techincal Skills</a></li>
+           <li><a href="#">Soft Skills</a></li>
+        </ul>
+  </div>
+        
+</form>  
+        </div>
+    <div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+         </div>
+      </div>
+ </div>
+            
+           
+           
+                
+<!----------------------------- Technical  skills ---------------------------------->             
+    <div class="" style="min-height:150px;"> 
+    <div class="panel-heading" style="padding-bottom:3%; margin-left:5%" >Technical Skills
+        <div class="panel-body">
+        <table class="table table-hover" style="width:100%;">
+                       <thead>
+                        <tr>
+                            <th> Type</th>
+                            <th> Proficiency</th>
+                            <th> Description</th>
+                            </tr>
+                            </thead>
+            <tr ng-repeat="x in Technicalx">
+                             <td>{{ x.skillName }}</td>
+   
+    
+    <td>  <div class="progress" style="width: 50%;">
+    <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" ng-style="{'width':x.proficiency + '0%'}"> {{x.proficiency}}0% </div></div></td>
+    <td>{{x.description}} </td>
+    
+            <td><button type="button" class="btn btn-coviam" data-toggle="modal" data-target="#TechincalSkills" id="edit_emergency" style="float:right;"><i class="icon-pencil">Edit</i></button></td> 
+                </tr>
+        
+<!------------------------Edit Button of TechincalSkill---------------------------->    
+         
+         <div class="modal fade" id="TechincalSkills" role="dialog">
+         <div class="modal-dialog">
+         <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Edit Technical Skills</h4>
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Type</span>
+                          <input id="ec_name" type="text" class="form-control" name="ec_name" placeholder="Type">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Proficiency</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="Proficiency/10">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Description</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="Description">
+                        </div>
+                                  
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn " data-dismiss="modal" style="background-color:#26A69A;">Submit</button>
+                        </div>
+                      </div>
+        </div>
+        </div>
+       <!---------------end of edit button of soft skill----------->     
+             
+                      </table>
+                </div>
+         </div>
+    </div> 
+         
+<!----------------------------- Soft skills ------------------------------>             
+ <div class="" style="min-height:150px;"> 
+<div class="panel-heading" style="padding-bottom:3%; margin-left:5%" >Soft Skills
+    <div class="panel-body">
+            <table class="table table-hover" style="width:100%;">
+                <thead>
+                        <tr>
+                            <th> Type</th>
+                            <th> Proficiency</th>
+                            <th> Description</th>
+                       </tr>
+                 </thead>
+                 <tr ng-repeat="x in Softx">
+     <td> {{x.skillName}}</td>
+    <td><div class="progress" style="width: 50%;">
+    <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      {{x.proficiency}}0%</div></div></td>
+    <td>{{x.description}} </td>
+                <td><button type="button" class="btn btn-coviam" data-toggle="modal" data-target="#SoftSkills" id="edit_emergency" style="float:right;"><i class="icon-pencil">Edit</i></button></td> 
+           
+     <!----------------------Edit Button of SoftSkill---------------------------->    
+         
+         <div class="modal fade" id="SoftSkills" role="dialog">
+         <div class="modal-dialog">
+        <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Edit Soft Skills</h4>
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Type</span>
+                          <input id="ec_name" type="text" class="form-control" name="ec_name" placeholder="Type">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Proficiency</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="Proficiency/10">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Description</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="Description">
+                        </div>
+                                  
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn " data-dismiss="modal" style="background-color:#26A69A;">Submit</button>
+                        </div>
+                      </div>
+        </div>
+        </div>
+       <!---------------end of edit button of soft skill----------->     
+             
+            </table>
+         </div>
+    </div>
+</div>    
+ <!---------------------------------------------------/soft skills--------------------------->                   
+         </div>
+    </div>
+</div>
+  

@@ -1,0 +1,179 @@
+            <div class="panel panel-flat col-md-12" style=" min-height:251;">
+                
+                <div class="panel-heading"><h4>Bank Details</h4>
+                  <button type="button" class="btn btn-coviam btn-sm" data-toggle="modal" data-target="#BankModal" id="edit_emergency" style="float:right;">
+                 <span class="icon-pencil"></span>Edit </button>   
+                    
+                </div>
+                
+              <!------------------------action---------------->  
+                <div class="modal fade" id="BankModal" role="dialog">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                        
+                       <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title"> Bank Details </h4>
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Bank Name</span>
+                          <input id="ec_bankname" type="text" class="form-control" name="ec_name" placeholder="BankName">
+                        </div>
+                    <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%"> Account Number</span>
+                          <input id="ec_accountNumber" type="text" class="form-control" name="ec_relation" placeholder="Acoount Number">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Branch Name</span>
+                          <input id="ec_branchName" type="text" class="form-control" name="ec_relation" placeholder="BranchName">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">IFSC Code</span>
+                          <input id="ec_ifscCode" type="text" class="form-control" name="ec_relation" placeholder="IFSC_Code">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Account Type</span>
+                          <input id="ec_accountType" type="text" class="form-control" name="ec_relation" placeholder="AccountType">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Bank Details ID</span>
+                          <input id="ec_bankDeatilId" type="text" class="form-control" name="ec_relation" placeholder="BankDetailsID">
+                        </div>
+                        
+                                  
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn" data-dismiss="modal" ng-click="addBankDetails()" style="background-color:#26A69A;">Submit</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            
+                 <div class="panel-body">
+                     
+                   
+                         <table class="col-md-6" style="width: 50%;">
+                            <tr>
+                                <th>Bank Name: </th> 
+                                <td>{{BankName}}</td>
+                            </tr>
+                             
+                            
+                             <tr>
+                                <th>Branch Name:</th>
+                                 <td>{{BranchName}}</td>
+                             </tr>
+                             
+                             
+                             <tr>
+                                <th>IFSC Code: </th>
+                                 <td>{{IFSCCode}}</td>
+                             </tr>
+                             
+                     </table>
+                      <table class="col-md-6" style="width: 50%;">
+                        
+                             <tr>
+                                <th>Account No. </th>
+                                 <td>{{AccountNo}}</td>
+                             </tr>
+                             
+                             
+                             <tr>
+                                <th>Account Type</th>
+                                 <td>{{AccountType}}</td>
+                             </tr>
+                             
+                             
+                             <tr>
+                                <th>Bank Details ID:</th>
+                                 <td>{{BankDetailsId}}</td>
+                             </tr>
+                         </table>
+                    </div>  
+                         
+                         
+</div>
+                     
+                     
+                     
+                     
+                     
+                <!------------------ Div 2 Visa Details --------------------->     
+                     
+        <div class="panel panel-flat col-md-12" style="min-height:232px;">
+                         
+    <div class="panel-heading"><h4>Visa Details</h4>
+    <button type="button" class="btn btn-coviam btn-sm" data-toggle="modal" data-target="#VisaModal" id="edit_emergency" style="float:right;">
+    <span class="icon-pencil"></span>Edit</button></div>
+            
+            
+            <div class="modal fade" id="VisaModal" role="dialog">
+                <div class="modal-dialog">
+                <div class="modal-content">
+                        
+                    <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title"> Visa Details </h4>
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Passport Id </span>
+                          <input id="ec_name" type="text" class="form-control" name="ec_name" placeholder="PassportId">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Country Name</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="CountryName">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Valid From</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="ValidFrom">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Expiry Date</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="ExpiryDate">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Issue Date</span>
+                          <input id="ec_relation" type="text" class="form-control" name="ec_relation" placeholder="IssueDate">
+                        </div>
+                        
+                              
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn " data-dismiss="modal" style="background-color:#26A69A;">Submit</button>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+            
+                        <div class="panel-body">
+                         <table style="width:100%;">
+                    
+                    <tr>
+                        <th>Passport ID</th>
+                       <th>Country Name </th>
+                         <th>Valid From</th>
+                         <th>Expiry Date</th>
+                        <th>Issue Date</th>
+                    </tr>
+                    
+                    <tr ng-repeat="x in visax">
+                        
+                         <td>{{x.passportId}}</td>
+                        <td>{{x.countryName}}</td>
+                         <td>{{x.validFrom}}</td>
+                         <td>{{x.expiryDate}}</td>
+                         <td>{{x.issueDate}}</td>
+                    </tr>
+                     
+                </table>
+                         
+            </div>         
+                         
+                         
+</div>
+     
+                
+                
+                

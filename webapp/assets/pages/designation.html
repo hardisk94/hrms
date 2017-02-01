@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DESIGNATION</title>
+        <script src="js/jquery-3.1.1.js"></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="index.css">
+       </head>
+    
+    <body>
+        <div class="container-fluid"></div>
+    
+    
+        <div class="panel panel-flat">
+        <div class="panel-heading"></div>
+        <div class="panel-body">
+        
+        
+        <div ng-app="myApp" ng-controller="myCtrl">
+        <table >
+                
+            <tr>
+                <td ng-model="name" class="td_left" >Name : </td>
+                <td><p class="td_right">{{name}}</p></td>
+           </tr>
+               
+            <tr>   
+                <td ng-model="desc" class="td_left">Description:</td>
+                <td><p class="td_right">{{desc}}</p></td>
+            </tr>
+                
+            <tr>
+                <td ng-model="roles" class="td_left">Roles:</td>
+                <td><p class="td_right"> {{roles}}</p></td>
+            </tr>
+           <tr>
+               <td ng-model="criteria" class="td_left"> Promotion Criteria: </td>
+               <td> <p class="td_right">{{criteria}}</p></td>
+            </tr>
+            
+        </table>
+        </div>   
+        </div>
+        </div>
+    
+        <div ng-view></div>
+           <script src="js/table.js"></script>
+            <script src="js/tablemodule.js"></script>
+    
+            
+    </body>
+</html>

@@ -1,0 +1,287 @@
+<div class="panel panel-flat">
+                                    
+                                    <div class="panel-body projecttab ">
+                                        Current Projects
+                                      
+                                          <button class="btn btn-primary" data-toggle="modal" data-target="#AddProjectModal" style="float:right;">Add Project</button>
+                                        
+                                        <!-- Modal -->
+  <div class="modal fade" id="AddProjectModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+         <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Add Project</h4>
+                        </div>
+             
+             
+            <form method="POST">
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Name</span>
+                          <input id="ec_name1" type="text" class="form-control" name="ec_name" placeholder="Project Name">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Type</span>
+                     <select id="ec_type1" type="text" class="form-control" name="ec_type1"  >
+                              <option value="PartnerShip">Partnership</option>
+                              <option value="Product">Product </option>
+                              <option value="Practice">Practice</option>
+                              <option value="Consulting">Consulting</option> 
+                          </select> 
+                        </div>
+                
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Description</span>
+                          <input id="ec_description1" type="text" class="form-control" name="ec_relation" placeholder="Project Description">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Start Date</span>
+                          <input id="ec_startDate1" type="date" class="form-control" name="ec_relation" placeholder="Start Date">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">End Date</span>
+                          <input id="ec_endDate1" type="date" class="form-control" name="ec_phone" placeholder="End Date">
+                        </div>
+                                 
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn" data-dismiss="modal" style="background-color:#26A69A;"  ng-click ="AddProject()" >Submit</button>
+                        </div>
+             </form>
+                
+                      </div>
+      
+    </div>
+  </div>
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    
+                                <div class="table-responsive">
+                                    
+                                <table class="table table-togglable table-hover">
+                                        
+                                    <thead>
+
+                                    <tr>
+                                        <th >Project Name</th>
+                                        <th >Project Type</th>
+                                        <th >Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Edit</th>
+
+                                    </tr>
+                                </thead>
+                                        
+                                        
+								<tbody id="Project_table1">
+								
+                                    <!-- js -->
+                                    
+                                    
+								</tbody>
+                                        
+							</table>
+                                    
+                                    
+                                    <div class="modal fade" id="projectmodal" role="dialog">
+                                        <div class="modal-dialog" style="min-height: 200px;">
+                                            <div class="modal-body">
+                                                <!-- Modal Content -->
+                                                     <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Edit Project</h4>
+                        </div>
+                                                         
+                <form>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Name</span>
+                          <input id="ec_name" type="text" class="form-control" name="ec_name" placeholder="Project Name">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Type</span>
+                <select id="ec_editType1" type="text" class="form-control" name="ec_editType1">
+                             <!-- <option value="PartnerShip">Partnership</option>
+                              <option value="Product">Product </option>
+                              <option value="Practice">Practice</option>
+                              <option value="Consulting">Consulting</option> -->
+                          </select> 
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Start Date</span>
+                          <input id="ec_relation" type="date" class="form-control" name="ec_relation" placeholder="Start Date">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">End Date</span>
+                          <input id="ec_phone" type="date" class="form-control" name="ec_phone" placeholder="End Date">
+                        </div>
+                                 
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn " data-dismiss="modal" style="background-color:#26A69A;">Submit</button>
+                        </div>
+                    
+                    
+                                                         </form>
+                      </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div> <!-- table- responsive -->
+                                    
+                                    
+                                    
+                                </div>
+                                
+                                
+                                
+                                
+                <!-- ------------ 2nd table - Previous Project---------->
+                                
+                                  <div class="panel panel-flat">
+                                    
+                                    <div class="panel-body projecttab">
+                                        Previous Experience 
+                                        
+                                          <button class="btn btn-primary" data-toggle="modal" data-target="#AddProjectModal2" style="float:right;">Add Experience</button>
+                                        
+                                        
+                                        
+                                        <!-- Modal -->
+  <div class="modal fade" id="AddProjectModal2" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+         <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Add Experience</h4>
+                        </div>
+                        
+             <form>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Name</span>
+                          <input id="ec_name2" type="text" class="form-control" name="ec_name" placeholder="Project Name">
+                        </div>
+                 <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Designation</span>
+                       <!-- <select id="ec_type2" type="text" class="form-control" name="ec_type2"  >
+                              <option value="PartnerShip">Partnership</option>
+                              <option value="Product">Product </option>
+                              <option value="Practice">Practice</option>
+                              <option value="Consulting">Consulting</option> 
+                          </select> -->
+                     
+                    <input id="ec_designation2" type="text" class="form-control" name="ec_designation" placeholder="Designation">
+                        </div> 
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Start Date</span>
+                          <input id="ec_startDate2" type="date" class="form-control" name="ec_relation" placeholder="Start Date">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">End Date</span>
+                          <input id="ec_endDate2" type="date" class="form-control" name="ec_phone" placeholder="End Date">
+                        </div>
+                                 
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn " data-dismiss="modal" style="background-color:#26A69A;" ng-click ="AddProjectPreviousExp()">Submit</button>
+                        </div>
+                 
+                 
+             </form>
+                      </div>
+      
+    </div>
+  </div>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </div>
+                                    
+                                    
+                                <div class="table-responsive">
+                                    
+                                <table class="table table-togglable table-hover">
+                                        
+                                    <thead>
+
+                                    <tr>
+                                        <th >Organization</th>
+                                        <th >Designation</th>
+                                        <th >Start Date</th>
+                                        <th>End Date</th>
+                                        <th>Edit</th>
+
+                                    </tr>
+                                </thead>
+                                        
+                                        
+								<tbody id="Project_table2">
+								    <!-- in js-->
+                                    
+                				</tbody>
+                                        
+							</table>
+                                    
+                                    <div class="modal fade" id="prevExp" role="dialog">
+                                        <div class="modal-dialog" style="min-height: 200px;">
+                                            <div class="modal-body">
+                                                <!-- Modal Content -->
+                                                   <div class="modal-content">
+                        <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4 class="modal-title">Edit Project</h4>
+                        </div>
+                                                       
+                    <form>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:5% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Name</span>
+                          <input id="ec_name" type="text" class="form-control" name="ec_name" placeholder="Project Name">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Project Type</span>
+                    <select id="ec_editType2" type="text" class="form-control" name="ec_editType2"  >
+                              <option value="PartnerShip">Partnership</option>
+                              <option value="Product">Product </option>
+                              <option value="Practice">Practice</option>
+                              <option value="Consulting">Consulting</option>
+                          </select>
+                            
+                        
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">Start Date</span>
+                          <input id="ec_relation" type="date" class="form-control" name="ec_relation" placeholder="Start Date">
+                        </div>
+                        <div class="input-group col-md-offset-1 col-md-10" style="margin:1% 5% 1% 5%;">
+                          <span class="input-group-addon" style="width: 30%">End Date</span>
+                          <input id="ec_phone" type="date" class="form-control" name="ec_phone" placeholder="End Date">
+                        </div>
+                                 
+                                  
+                                  
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-success" data-dismiss="modal" style="background-color:#26A69A;">Submit</button>
+                        </div>
+                        
+                                                       </form>
+                      </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div> <!-- table- responsive -->
+                                    
